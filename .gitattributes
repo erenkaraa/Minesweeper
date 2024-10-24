@@ -1,3 +1,1 @@
-# Auto detect text files and perform LF normalization
-find . -type f | perl -ne 'print $1 if m/\.([^.\/]+)$/' | sort -u | awk '{print $1" filter=lfs diff=lfs merge=lfs -text"}' | sed 's/^/*./'
 *.bc filter=lfs diff=lfs merge=lfs -text
